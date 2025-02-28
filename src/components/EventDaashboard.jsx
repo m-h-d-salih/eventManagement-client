@@ -11,6 +11,8 @@ import LogoutButton from "./LogoutButton"
 import EventTable from "./EventTable"
 import SearchInput from "./SearchInput"
 import AddButton from "./AddButton"
+import bitCoin from "../assets/bitcoin-01.png"
+import profileIcon from "../assets/Ellipse 1.png"
 
 export default function EventDashboard() {
   const [expandedSections, setExpandedSections] = useState({
@@ -49,8 +51,8 @@ export default function EventDashboard() {
           <button onClick={toggleMenu} className="lg:hidden p-2 text-pink-300 hover:text-pink-100">
             <Menu size={24} />
           </button>
-          <div className="w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 flex items-center justify-center">
-            <span className="text-2xl font-bold">₿</span>
+          <div className="w-12 h-12 rounded-full bg-gradient-to-r  flex items-center justify-center">
+            <span className="text-2xl font-bold"><img src={bitCoin}/></span>
           </div>
         </div>
 
@@ -68,13 +70,11 @@ export default function EventDashboard() {
               </p>
               <p className="text-xs text-gray-300">Welcome back!</p>
             </div>
-            <div className="w-10 h-10 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 flex items-center justify-center overflow-hidden">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-r  flex items-center justify-center overflow-hidden">
               <img
-                src="/placeholder.svg?height=40&width=40"
+                src={profileIcon}
                 alt="Profile"
-                width={40}
-                height={40}
-                className="object-cover"
+                className="object-cover h-24"
               />
             </div>
           </div>
